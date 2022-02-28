@@ -1,0 +1,23 @@
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "make": "Toyoto",
+    "year": 1980,
+    "model": "Prado",
+    "mileage": 1000,
+    "lat": 12,
+    "lng": 56,
+    "price": 4300
+}
+
+### Approve an existing report
+PATCH http://localhost:3000/reports/3
+Content-Type:  application/json
+
+{
+    "approved": true
+}
+
+### egt estimate for car
+GET  http://localhost:3000/reports?make=Toyoto&model=Prado&lat=12&lng=56&mileage=1000&year=1980

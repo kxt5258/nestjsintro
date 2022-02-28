@@ -1,0 +1,47 @@
+### post user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "kinley@asdf.com",
+    "password": "password1"
+}
+
+### signin 
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "kinley@asdf.com",
+    "password": "password1"
+}
+
+
+### Signout
+POST http://localhost:3000/auth/signout
+
+### Get current user
+GET http://localhost:3000/auth/whoami
+
+### Get one user
+GET http://localhost:3000/auth/1
+
+### Get all users with email
+GET http://localhost:3000/auth?email=asdf@asdf.com
+
+### Delete user with id
+DELETE http://localhost:3000/auth/1
+
+
+### Update a user
+PATCH http://localhost:3000/auth/2
+Content-Type: application/json
+
+{"email": "asdf@gmail.com"}
+
+### Set a color
+GET http://localhost:3000/auth/colors/yellow
+
+### Get the color
+GET http://localhost:3000/auth/colors
+
